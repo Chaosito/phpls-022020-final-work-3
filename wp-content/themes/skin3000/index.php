@@ -2,7 +2,19 @@
 <div class="main-content">
     <div class="content-wrapper">
         <div class="content">
-            <h1 class="title-page">Последние новости и акции из мира туризма</h1>
+            <h1 class="title-page">
+                <?php
+                if (is_tag()) {
+                    single_tag_title();
+                } elseif (is_category()) {
+                    single_cat_title();
+                } elseif (is_search()) {
+                    print 'Результаты поиска для "'.get_search_query().'"';
+                } else {
+                    print 'Последние новости и акции из мира туризма';
+                }
+                ?>
+            </h1>
 
             <?php if (have_posts()): ?>
             <div class="posts-list">
@@ -32,8 +44,6 @@
                 </div>
                 <!-- post-mini_end-->
                 <?php endwhile ?>
-
-
             </div>
             <div class="pagenavi-post-wrap">
                 <?php

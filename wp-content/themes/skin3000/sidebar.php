@@ -1,22 +1,21 @@
 <!-- sidebar-->
 <div class="sidebar">
+    <?php if ($tags = get_terms(['taxonomy' => 'post_tag', 'hide_empty' => 0])) :?>
     <div class="sidebar__sidebar-item">
         <div class="sidebar-item__title">Теги</div>
         <div class="sidebar-item__content">
             <ul class="tags-list">
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">путешествия по россии</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">турция</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">гоа</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">авиабилеты</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">отели</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">европа</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">азия</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">тайланд</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">хостелы</a></li>
-                <li class="tags-list__item"><a href="#" class="tags-list__item__link">шоппинг</a></li>
+                <?php foreach($tags as $tag) : ?>
+                    <li class="tags-list__item">
+                        <a href="<?php echo get_term_link($tag->term_id); ?>" class="tags-list__item__link">
+                            <?php echo $tag->name; ?>
+                        </a>
+                    </li>
+                <?php endforeach;?>
             </ul>
         </div>
     </div>
+    <?php endif;?>
     <div class="sidebar__sidebar-item">
         <div class="sidebar-item__title">Категории</div>
         <div class="sidebar-item__content">
