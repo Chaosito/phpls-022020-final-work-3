@@ -294,14 +294,14 @@ p {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
-  .nav-list__nav-item {
+  .menu-item {
     margin: 0 6px 0;
     padding: 0 5px 0;
     text-align: center;
     list-style: none; }
-    .nav-list__nav-item:last-child {
+    .menu-item:last-child {
       margin-right: 0; }
-    .nav-list__nav-item__nav-link {
+    .menu-item a {
       font-family: 'Lato', sans-serif;
       font-size: 1.3rem;
       color: #fefefe;
@@ -314,7 +314,7 @@ p {
       padding: 4px 0;
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-      .nav-list__nav-item__nav-link:hover, .nav-list__nav-item__nav-link:focus, .nav-list__nav-item__nav-link:active {
+      .menu-item a:hover, .menu-item a:focus, .menu-item a:active {
         border-bottom: 3px solid #fff; }
 
 .bottom-header {
@@ -779,13 +779,13 @@ li {
 .b-menu__list {
   height: 30px;
   padding: 0 10px; }
-  .b-menu__list__item {
+  .b-menu__list > .menu-item {
     display: inline-block;
     margin-bottom: 5px;
     margin-right: 10px; }
-    .b-menu__list__item:last-child {
+    .b-menu__list > .menu-item:last-child {
       margin-right: 0; }
-    .b-menu__list__item__link {
+    .b-menu__list > .menu-item > a {
       font-family: 'Lato', sans-serif;
       font-size: 1rem;
       color: #fefefe;
@@ -798,7 +798,7 @@ li {
       padding: 6px 0;
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-      .b-menu__list__item__link:hover, .b-menu__list__item__link:focus, .b-menu__list__item__link:active {
+      .b-menu__list > .menu-item > a:hover, .b-menu__list > .menu-item > a:focus, .b-menu__list > .menu-item > a:active {
         border-bottom: 3px solid #fff; }
 
 /* Copyright */

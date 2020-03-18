@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Главная страница</title>
+    <title><?php wp_get_document_title() ?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,17 +14,17 @@
         <div class="top-header">
           <div class="top-header__wrap">
             <div class="logotype-block">
-              <div class="logo-wrap"><a href="<?php echo site_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.svg" alt="Логотип" class="logo-wrap__logo-img"></a></div>
+              <div class="logo-wrap"><a href="<?php echo site_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.svg" alt="<?php bloginfo('name') ?>" class="logo-wrap__logo-img"></a></div>
             </div>
-            <nav class="main-navigation">
-              <ul class="nav-list">
-                <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Главная</a></li>
-                <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Полезная информация</a></li>
-                <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Последние акции</a></li>
-                <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">О сервисе</a></li>
-                <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Новости</a></li>
-              </ul>
-            </nav>
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'topmenu',
+                'container' => 'nav',
+                'container_class' => 'main-navigation',
+                'menu_class' => 'nav-list',
+                'depth' => 1,
+            ]);
+            ?>
           </div>
         </div>
         <div class="bottom-header">
@@ -158,17 +158,17 @@
       </div>
       <footer class="main-footer">
         <div class="content-footer">
-          <div class="bottom-menu">
-            <ul class="b-menu__list">
-              <li class="b-menu__list__item"><a href="#" class="b-menu__list__item__link">Главная</a></li>
-              <li class="b-menu__list__item"><a href="#" class="b-menu__list__item__link">Полезная информация</a></li>
-              <li class="b-menu__list__item"><a href="#" class="b-menu__list__item__link">Последние акции</a></li>
-              <li class="b-menu__list__item"><a href="#" class="b-menu__list__item__link">О сервисе</a></li>
-            </ul>
-          </div>
-          <div class="copyright-wrap">
-            <div class="copyright-text">Туристик<a href="#" class="copyright-text__link"> loftschool 2016</a></div>
-          </div>
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'botmenu',
+                'container_class' => 'bottom-menu',
+                'menu_class' => 'b-menu__list',
+                'depth' => 1,
+            ]);
+            ?>
+            <div class="copyright-wrap">
+                <div class="copyright-text">Туристик<a href="#" class="copyright-text__link"> loftschool <?php echo date('Y') ?></a></div>
+            </div>
         </div>
       </footer>
     </div>
