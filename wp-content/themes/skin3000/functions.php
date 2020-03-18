@@ -13,3 +13,5 @@ register_nav_menus([
     'topmenu' => 'Меню в шапке',
     'botmenu' => 'Меню в подвале'
 ]);
+
+add_theme_support('post-thumbnails');
