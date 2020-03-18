@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <?php wp_head() ?>
 </head>
 <body>
@@ -14,7 +13,11 @@
         <div class="top-header">
             <div class="top-header__wrap">
                 <div class="logotype-block">
-                    <div class="logo-wrap"><a href="<?php echo site_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.svg" alt="<?php bloginfo('name') ?>" class="logo-wrap__logo-img"></a></div>
+                    <div class="logo-wrap">
+                        <a href="<?php echo site_url() ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.svg" alt="<?php bloginfo('name') ?>" class="logo-wrap__logo-img">
+                        </a>
+                    </div>
                 </div>
                 <?php
                 wp_nav_menu([
