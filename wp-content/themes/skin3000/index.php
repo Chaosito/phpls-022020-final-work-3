@@ -36,13 +36,13 @@
 
             </div>
             <div class="pagenavi-post-wrap">
-                <a href="#" class="pagenavi-post__prev-postlink"><i class="icon icon-angle-double-left"></i></a>
-                <span class="pagenavi-post__current">1</span>
-                <a href="#" class="pagenavi-post__page">2</a>
-                <a href="#" class="pagenavi-post__page">3</a>
-                <a href="#" class="pagenavi-post__page">...</a>
-                <a href="#" class="pagenavi-post__page">10</a>
-                <a href="#" class="pagenavi-post__next-postlink"><i class="icon icon-angle-double-right"></i></a>
+                <?php
+                echo paginate_links([
+                    'prev_next' => true,
+                    'prev_text' => '<i class="icon icon-angle-double-left"></i>',
+                    'next_text' => '<i class="icon icon-angle-double-right"></i>'
+                ]);
+                ?>
             </div>
             <?php else: ?>
                 <p>Ничего нет!</p>

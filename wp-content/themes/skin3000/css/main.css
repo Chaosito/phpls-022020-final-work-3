@@ -594,7 +594,7 @@ li {
 .pagenavi-post-wrap {
   padding: 10px 0; }
 
-.pagenavi-post__prev-postlink, .pagenavi-post__page, .pagenavi-post__next-postlink {
+.pagenavi-post-wrap > a.prev, .pagenavi-post-wrap > a.page-numbers, .pagenavi-post-wrap > a.next {
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   line-height: 1.2rem;
@@ -606,11 +606,11 @@ li {
   letter-spacing: 1px;
   -webkit-border-radius: 1px;
           border-radius: 1px; }
-  .pagenavi-post__prev-postlink:hover, .pagenavi-post__page:hover, .pagenavi-post__next-postlink:hover {
+  .pagenavi-post-wrap > a.prev:hover, .pagenavi-post-wrap > a.page-numbers:hover, .pagenavi-post-wrap > a.next:hover {
     color: #ffffff;
     background: #0097a7; }
 
-.pagenavi-post__current {
+.pagenavi-post-wrap > span.current {
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   line-height: 1.143rem;
