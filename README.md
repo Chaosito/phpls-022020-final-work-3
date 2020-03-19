@@ -1,5 +1,7 @@
 # phpls-022020-final-work-3
 
+## Выпускной проект №3 - "Сайт-визитка на основе WP"
+
 ##### 1. Create DB & user
 
 db-name: final-work-3
