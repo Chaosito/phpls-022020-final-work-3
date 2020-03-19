@@ -45,4 +45,5 @@
         </div>
     </div>
     <?php endif;?>
+    <?php echo register_block_core_calendar();?>
 </div>
