@@ -10,6 +10,8 @@ db-user-pass: final-work-3
 
 ##### 2. Import DB data: /database/dump.sql
 
+##### 3. Site settings:
+
 site-folder: phpls-022020-final-work-3
 
 site-name: final-work-3
