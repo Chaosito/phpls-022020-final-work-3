@@ -9,7 +9,7 @@
         ]);
         ?>
         <div class="copyright-wrap">
-            <div class="copyright-text">Туристик<a href="#" class="copyright-text__link"> loftschool <?php echo date('Y') ?></a></div>
+            <div class="copyright-text">Туристик<a href="#" class="copyright-text__link"> loftschool <?=date('Y');?></a></div>
         </div>
     </div>
 </footer>
